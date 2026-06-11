@@ -1,0 +1,22 @@
+{
+  "name": "@agentprivacy/shared-types",
+  "version": "1.0.0",
+  "description": "Shared types for Swordsman and Mage extensions",
+  "type": "module",
+  "main": "types/index.ts",
+  "types": "types/index.ts",
+  "exports": {
+    ".": "./types/index.ts",
+    "./types": "./types/index.ts",
+    "./ceremony": "./types/ceremony-types.ts",
+    "./spell": "./types/spell.ts",
+    "./channel": "./types/channel.ts",
+    "./blade": "./types/blade.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

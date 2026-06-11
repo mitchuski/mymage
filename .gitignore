@@ -1,0 +1,29 @@
+# Build output — regenerate with `npm run build` (esbuild via build.js)
+dist/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Extension packaging artifacts
+*.zip
+*.crx
+*.pem
+web-ext-artifacts/

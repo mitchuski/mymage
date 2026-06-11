@@ -1,0 +1,16 @@
+{
+  "name": "mymage",
+  "version": "1.0.0",
+  "description": "Mage Extension - Spellbook Projection. Intelligence, hexagram, drake engine.",
+  "type": "module",
+  "scripts": {
+    "build": "node build.js",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.4.0",
+    "esbuild": "^0.21.0"
+  }
+}

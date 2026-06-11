@@ -1,0 +1,51 @@
+{
+  "manifest_version": 3,
+  "name": "Mage — Spellbook Projection",
+  "version": "1.2.1",
+  "description": "The spell that projects sovereignty across distance. Knowledge scanning, constellation mapping, ceremony engine. Bundles privacymage's grimoire and the City of Mages grimoire v1.2.2 (Second Person · Tomes IV–V cast · two-tier collapse — archetype + mage · Luca 📐 at V0 · UOR Foundation as kindred substrate · SpaceComputer as kindred ecosystem · Aether ⊥ Celestial two-mana economy).",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "dist/background/index.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["dist/content/index.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "assets/icons/mage-16.svg",
+      "48": "assets/icons/mage-48.svg",
+      "128": "assets/icons/mage-128.svg"
+    }
+  },
+  "externally_connectable": {
+    "ids": ["*"],
+    "matches": ["http://localhost:5000/*", "https://agentprivacy.ai/*", "https://*.agentprivacy.ai/*"]
+  },
+  "icons": {
+    "16": "assets/icons/mage-16.svg",
+    "48": "assets/icons/mage-48.svg",
+    "128": "assets/icons/mage-128.svg"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "privacymage_grimoire_v10_2_0.json",
+        "city_of_mages_grimoire_v1_2_0.json"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
